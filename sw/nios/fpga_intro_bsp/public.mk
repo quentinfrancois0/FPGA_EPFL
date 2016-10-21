@@ -86,7 +86,7 @@ ACDS_VERSION := 16.0
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/qfrancoi/Downloads/fpga_intro/hw/quartus/system.sopcinfo
+SOPCINFO_FILE := C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

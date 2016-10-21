@@ -3,8 +3,8 @@
 # This script creates the hello_world application in this directory.
 
 
-BSP_DIR=C:/Users/qfrancoi/Downloads/fpga_intro/sw/nios/fpga_intro_bsp/
-QUARTUS_PROJECT_DIR=C:/Users/qfrancoi/Downloads/fpga_intro/hw/quartus/
+BSP_DIR=C:/Users/qfrancoi/Desktop/fpga_intro/sw/nios/fpga_intro_bsp/
+QUARTUS_PROJECT_DIR=C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/
 NIOS2_APP_GEN_ARGS="--elf-name fpga_intro.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files hello_world.c"
 
 

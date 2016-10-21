@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element clk_0
@@ -95,7 +95,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="fpga_intro.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -445,11 +445,6 @@
    version="16.0"
    start="clk_0.clk_reset"
    end="onchip_memory2_0.reset1" />
- <connection
-   kind="reset"
-   version="16.0"
-   start="nios2_gen2_0.debug_reset_request"
-   end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
    version="16.0"

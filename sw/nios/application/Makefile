@@ -177,7 +177,7 @@ CRT0 :=
 SYS_LIB :=
 
 # Define path to the root of the BSP.
-BSP_ROOT_DIR := C:/Users/qfrancoi/Downloads/fpga_intro/sw/nios/fpga_intro_bsp/
+BSP_ROOT_DIR := C:/Users/qfrancoi/Desktop/fpga_intro/sw/nios/fpga_intro_bsp/
 
 # List of application specific include directories, library directories and library names
 APP_INCLUDE_DIRS :=
@@ -188,7 +188,7 @@ APP_LIBRARY_NAMES :=
 BUILD_PRE_PROCESS :=
 BUILD_POST_PROCESS :=
 
-QUARTUS_PROJECT_DIR := C:/Users/qfrancoi/Downloads/fpga_intro/hw/quartus/
+QUARTUS_PROJECT_DIR := C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/
 
 
 #END GENERATED

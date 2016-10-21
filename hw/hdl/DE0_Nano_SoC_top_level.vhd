@@ -117,7 +117,7 @@ begin
 	u1 : component system
 		port map (
 			clk_clk                          => FPGA_CLK1_50,                          --                       clk.clk
-			reset_reset_n                    => KEY_N(0),                    --                     reset.reset_n
+			reset_reset_n                    => '1',                    --                     reset.reset_n
 			pio_0_external_connection_export => LED  -- pio_0_external_connection.export
 		);
 
