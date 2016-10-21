@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Oct 18 17:20:31 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : fpga_intro
+Top-level Entity Name : DE0_Nano_SoC_top_level
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 1923
+Total pins : 11
+Total virtual pins : 0
+Total block memory bits : 1,112,320
+Total DSP Blocks : 3
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
