@@ -4,8 +4,8 @@
 
 BSP_TYPE=hal
 BSP_DIR=.
-SOPC_DIR=C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/
-SOPC_FILE=C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/system.sopcinfo
+SOPC_DIR=D:/Temp/VHDL/FPGA_EPFL/hw/quartus/
+SOPC_FILE=D:/Temp/VHDL/FPGA_EPFL/hw/quartus/system.sopcinfo
 NIOS2_BSP_ARGS=""
 CPU_NAME=
 

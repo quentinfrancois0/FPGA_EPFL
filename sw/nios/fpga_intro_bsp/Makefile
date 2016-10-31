@@ -101,7 +101,7 @@ ACDS_VERSION := 16.0
 # BUILD_NUMBER: 211
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/qfrancoi/Desktop/fpga_intro/hw/quartus/system.sopcinfo
+SOPC_FILE := D:/Temp/VHDL/FPGA_EPFL/hw/quartus/system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
