@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2016.11.02.18:39:03"
+ date="2016.11.02.19:20:57"
  outputDirectory="D:/Temp/FPGA_EPFL/parallel_port/hw/quartus/db/ip/sld301e1ffa/">
  <perimeter>
   <parameter
