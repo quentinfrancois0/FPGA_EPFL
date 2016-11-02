@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for fpga_intro
-Mon Oct 31 21:19:22 2016
+Tue Nov 01 18:11:40 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -111,8 +111,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                                         ; Status ; Read at                  ;
 +---------------------------------------------------------------------------------------+--------+--------------------------+
-; d:/temp/vhdl/fpga_epfl/hw/quartus/db/ip/system/submodules/altera_reset_controller.sdc ; OK     ; Mon Oct 31 21:18:58 2016 ;
-; d:/temp/vhdl/fpga_epfl/hw/quartus/db/ip/system/submodules/system_nios2_gen2_0_cpu.sdc ; OK     ; Mon Oct 31 21:18:58 2016 ;
+; d:/temp/vhdl/fpga_epfl/hw/quartus/db/ip/system/submodules/altera_reset_controller.sdc ; OK     ; Tue Nov 01 18:11:17 2016 ;
+; d:/temp/vhdl/fpga_epfl/hw/quartus/db/ip/system/submodules/system_nios2_gen2_0_cpu.sdc ; OK     ; Tue Nov 01 18:11:17 2016 ;
 +---------------------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -650,7 +650,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Mon Oct 31 21:18:54 2016
+    Info: Processing started: Tue Nov 01 18:11:13 2016
 Info: Command: quartus_sta fpga_intro -c fpga_intro
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -862,9 +862,9 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1222 megabytes
-    Info: Processing ended: Mon Oct 31 21:19:22 2016
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 1224 megabytes
+    Info: Processing ended: Tue Nov 01 18:11:40 2016
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:24
 
 

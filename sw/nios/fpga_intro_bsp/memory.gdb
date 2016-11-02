@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'system'
 # SOPC Builder design path: D:/Temp/VHDL/FPGA_EPFL/hw/quartus/system.sopcinfo
 #
-# Generated: Mon Oct 31 20:13:51 CET 2016
+# Generated: Wed Nov 02 12:33:06 CET 2016
 
 # DO NOT MODIFY THIS FILE
 #
