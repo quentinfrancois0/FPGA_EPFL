@@ -8,16 +8,16 @@ end testbench;
 
 ARCHITECTURE bhv OF testbench IS
 -- The system to test under simulation
-component Parallel_port is
+component PWM is
    PORT(
     nReset	: IN std_logic;
-	Clk		: IN std_logic;
-	Addr	: IN std_logic_vector (2 DOWNTO 0);
-	R		: IN std_logic; --Read pin
-	W		: IN std_logic; --Write pin
-	RDData	: OUT std_logic_vector (7 DOWNTO 0); 
-	WRData	: IN std_logic_vector (7 DOWNTO 0);
-	PortP	: INOUT std_logic_vector (7 DOWNTO 0)
+		Clk		: IN std_logic;
+		Addr	: IN std_logic_vector (2 DOWNTO 0);
+		R		: IN std_logic;
+		W		: IN std_logic;
+		RData	: OUT std_logic_vector (7 DOWNTO 0);
+		WData	: IN std_logic_vector (7 DOWNTO 0);
+		PWMOut	: OUT std_logic
 );
 	end component;
 
@@ -29,12 +29,12 @@ component Parallel_port is
 	signal W		: std_logic := '0'; --Write pin
 	signal RDData   : std_logic_vector (7 DOWNTO 0) := "00000000"; 
 	signal WRData   : std_logic_vector (7 DOWNTO 0) := "00000000";
-	signal PortP    : std_logic_vector (7 DOWNTO 0) := "00000000";
+	signal PWMOut    : std_logic := '0';
 	signal end_sim  : boolean := false;
    	constant HalfPeriod  : TIME := 10 ns;  -- 50 MHz -> 20ns/2 -> 10 ns
 	
 BEGIN 
-DUT : Parallel_port               -- Component to Test as Device Under Test       
+DUT : PWM               -- Component to Test as Device Under Test       
      Port MAP( 
 	Clk => Clk,  		 -- from component => signals in the architecture 
 	nReset => nReset,
@@ -43,7 +43,7 @@ DUT : Parallel_port               -- Component to Test as Device Under Test
 	W => W,
 	RDData => RDData,
 	WRData => WRData,
-	PortP => PortP
+	PWMOut => PWMOut
     ); 
 	
 -- Clock generation for all simulation time 
@@ -60,7 +60,7 @@ process
 	end if;
 end process;
 
-direction_process :
+test :
 process
 
 	procedure toggle_reset is
@@ -104,29 +104,25 @@ begin
 	
 	toggle_reset;
 	
-	-- Writing dir and port registers
-	-- write_register("000", X"f0");
-	-- write_register("010", X"ff");
-	-- wait for 4 * HalfPeriod;
-	
-	-- Testing set function
-	-- write_register("000", X"f0");
-	-- PortP <= "X73";
-	-- write_register("011", X"ff");
-	-- wait for 4 * HalfPeriod;
-	
-	-- Testing clear function
-	write_register("000", X"ff");
-	PortP <= X"73";
-	write_register("100", X"ff");
-	read_register("001");
+	-- Writing clock_divider = 0, period = 256 * (2*HalfPeriod) = 5,12 us
+	write_register("000", X"00");
+	write_register("001", X"00");
 	wait for 4 * HalfPeriod;
 	
-	-- Reading the pin register
-	-- write_register("000", X"00");
-	-- PortP <= "10101010";
-	-- read_register("001");
-	-- wait for 4 * HalfPeriod;
+	-- Writing duty cycle = 50%
+	write_register("010", X"80");
+	wait for 4 * HalfPeriod;
+	
+	-- Writing polarity = 1
+	write_register("011", X"01");
+	wait for 4 * HalfPeriod;
+	
+	-- Writing control = 1
+	write_register("101", X"01");
+	wait for 4 * HalfPeriod;
+	
+	-- Wait for 1 period of the PWM
+	wait for 256 * 2 * HalfPeriod;
 	
 	end_sim <= true;
 	wait;
