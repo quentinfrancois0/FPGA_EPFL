@@ -129,12 +129,12 @@ Count:
 	Process(iRegEnable)
 	Begin
 		if rising_edge(iRegEnable) then
-			iRegCount := iRegCount+1;
+			iRegCount <= iRegCount+1;
 		end if;
 	end process Count;
 
 -- Process to reset i when it reaches the duty cycle and period values and to determine the stage
-Reseti:
+UpdateRegOut:
 	Process(iRegCount, iRegDuty, iRegPeriod)
 	Begin
 		if iRegCount = iRegDuty*iRegPeriod then
@@ -145,7 +145,7 @@ Reseti:
 			iRegCount <= (others => '0');
 			iRegOut <= true;
 		end if;
-	end process Reseti;
+	end process UpdateRegOut;
 
 -- Process to output the PWM
 OutPWM:
