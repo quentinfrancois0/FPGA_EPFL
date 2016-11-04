@@ -101,7 +101,7 @@ ClkDivider:
 				iRegCountEnable <= iRegCountEnable+1;
 			elsif  iRegCountEnable = iRegClkD then
 				if iRegCount = "255" then
-					iRegCount = '0';
+					iRegCount <= '0';
 				else
 					iRegCount <= iRegCount+1;
 				end if;
