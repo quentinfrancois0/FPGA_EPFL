@@ -1,5 +1,5 @@
 Flow report for PWM_module
-Fri Nov 04 11:55:08 2016
+Fri Nov 04 13:27:08 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 04 11:55:07 2016       ;
+; Flow Status                     ; Successful - Fri Nov 04 13:27:08 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; PWM_module                                  ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/04/2016 11:54:23 ;
+; Start date & time ; 11/04/2016 13:26:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PWM_module          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+------------------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name            ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1098258261821.147825686304312         ; --            ; --                     ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1098258261821.147826241601744         ; --            ; --                     ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --                     ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --                     ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                     ; --             ;
@@ -99,8 +99,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 975 MB              ; 00:01:25                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:25                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 944 MB              ; 00:00:32                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

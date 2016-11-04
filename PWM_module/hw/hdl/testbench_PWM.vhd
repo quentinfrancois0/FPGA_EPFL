@@ -51,14 +51,15 @@ clk_process :
 process
    begin
 	if not end_sim then
-		clk <= '0'; 
+		Clk <= '0'; 
 		wait for HalfPeriod; 
-		clk <= '1'; 
+		Clk <= '1'; 
 		wait for HalfPeriod;
 	else 
 		wait;
 	end if;
 end process;
+
 
 test :
 process
@@ -99,30 +100,24 @@ process
 	end procedure;
 
 begin
-
-	wait until falling_edge(clk);
-	
 	toggle_reset;
 	
 	-- Writing clock_divider = 0, period = 256 * (2*HalfPeriod) = 5,12 us
-	write_register("000", X"00");
+	write_register("000", X"01");
 	write_register("001", X"00");
-	wait for 4 * HalfPeriod;
+	wait for 4 * HalfPeriod; -- ligne qui empêche d'écrire le registre duty cycle
 	
 	-- Writing duty cycle = 50%
 	write_register("010", X"80");
-	wait for 4 * HalfPeriod;
 	
 	-- Writing polarity = 1
 	write_register("011", X"01");
-	wait for 4 * HalfPeriod;
 	
 	-- Writing control = 1
 	write_register("101", X"01");
-	wait for 4 * HalfPeriod;
 	
 	-- Wait for 1 period of the PWM
-	wait for 256 * 2 * HalfPeriod;
+	wait for 1024 * 2 * HalfPeriod;
 	
 	end_sim <= true;
 	wait;

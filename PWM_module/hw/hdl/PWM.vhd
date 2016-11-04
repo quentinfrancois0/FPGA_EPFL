@@ -47,15 +47,12 @@ WriteProcess:
         iRegClkD		<= (others => '0');
 		iRegDuty		<= (others => '0');
 		iRegPol			<= (others => '0');
-		iRegCount		<= (others => '0');
 		iRegCtrl		<= (others => '0');
-		iRegOut			<= '0';
-		iRegCountEnable	<= (others => '0');
-		iRegRead		<= '0';
 	elsif rising_edge(Clk) then
 		if W = '1' then
 			case Addr is
-				when "000" => iRegClkD <= WData;
+				when "000" => iRegClkD (7 DOWNTO 0) <= WData;
+				when "001" => iRegClkD (15 DOWNTO 8) <= WData;
 				when "010" => iRegDuty <= WData;
 				when "011" => iRegPol <= WData;
 				when "101" => iRegCtrl <= WData;
@@ -67,9 +64,11 @@ WriteProcess:
 
 -- Process to wait 1 rising edge before reading the internal registers
 WaitRead:
-	Process(Clk)
+	Process(nReset, Clk)
 	Begin
-		if rising_edge(Clk) then
+		if nReset = '0' then
+			iRegRead <= '0';
+		elsif rising_edge(Clk) then
 			iRegRead <= R;
 		end if;
 	end process WaitRead;
@@ -82,7 +81,8 @@ ReadProcess:
 	RData <= (others => '0');
       if iRegRead = '1' then
 			case Addr is
-				when "000" => RData <= iRegClkD;
+				when "000" => RData <= iRegClkD (7 DOWNTO 0);
+				when "001" => RData <= iRegClkD (15 DOWNTO 8);
 				when "010" => RData <= iRegDuty;
 				when "011" => RData <= iRegPol;
 				when "100" => RData <= iRegCount;
@@ -94,9 +94,12 @@ ReadProcess:
 
 -- Process to divide the clock
 ClkDivider:
-	Process(Clk)
+	Process(nReset, Clk)
 	Begin
-		if rising_edge(clk) then
+		if nReset = '0' then
+			iRegCount		<= (others => '0');
+			iRegCountEnable	<= (others => '0');
+		elsif rising_edge(clk) then
 			if iRegCountEnable < iRegClkD then
 				iRegCountEnable <= std_logic_vector(unsigned(iRegCountEnable) + 1);
 			elsif  iRegCountEnable = iRegClkD then
@@ -114,13 +117,17 @@ ClkDivider:
 
 -- Process to update the output
 UpdateRegOut:
-	Process(iRegCount, iRegDuty, iRegPol)
+	Process(nReset, iRegCount, iRegDuty, iRegPol)
 	Begin
-		if iRegCount <= iRegDuty then
-			iRegOut <= iRegPol(0);
-		end if;
-		if iRegCount > iRegDuty then
-			iRegOut <= not iRegPol(0);
+		if nReset = '0' then
+			iRegOut			<= '0';
+		else
+			if iRegCount <= iRegDuty then
+				iRegOut <= iRegPol(0);
+			end if;
+			if iRegCount > iRegDuty then
+				iRegOut <= not iRegPol(0);
+			end if;
 		end if;
 	end process UpdateRegOut;
 
@@ -128,7 +135,7 @@ UpdateRegOut:
 OutPWM:
 	Process(iRegCtrl, iRegOut)
 	Begin
-		if iRegCtrl = "00" then
+		if iRegCtrl = X"00" then
 			PWMOut <= '0';
 		else
 			PWMOut <= iRegOut;

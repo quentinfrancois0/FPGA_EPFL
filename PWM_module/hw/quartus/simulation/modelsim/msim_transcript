@@ -12,20 +12,15 @@
 # 
 # vcom -93 -work work {D:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 11:55:30 on Nov 04,2016
+# Start time: 14:04:33 on Nov 04,2016
 # vcom -reportprogress 300 -93 -work work D:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity DE0_Nano_SoC_top_level
 # -- Compiling architecture rtl of DE0_Nano_SoC_top_level
-# End time: 11:55:31 on Nov 04,2016, Elapsed time: 0:00:01
+# End time: 14:04:34 on Nov 04,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlib system
-# vmap system system
-# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
-# vmap system system 
-# Modifying modelsim.ini
 # 
 # reading D:/Logiciels/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini
 # Loading project PWM_module_test
