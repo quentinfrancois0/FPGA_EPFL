@@ -1,0 +1,180 @@
+# vsim -gui -l msim_transcript -do "PWM_module_run_msim_rtl_vhdl.do" work.testbench 
+# Start time: 12:03:22 on Nov 04,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(bhv)
+# Loading work.pwm(bhv)
+# PWM_module_run_msim_rtl_vhdl.do
+# invalid command name "PWM_module_run_msim_rtl_vhdl.do"
+add wave -position end sim:/testbench/DUT/*
+run
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+run
+run
+# Compile of testbench_PWM.vhd failed with 4 errors.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+run
+run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 16 (15 downto 0). Right is 8 (7 downto 0).
+#    Time: 70 ns  Iteration: 1  Process: /testbench/DUT/WriteProcess File: D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd
+# Fatal error in Process WriteProcess at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd line 58
+# 
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Temp/FPGA_EPFL/PWM_module/hw/modelsim/PWM.vhd 58 Process WriteProcess
+# 
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript -do PWM_module_run_msim_rtl_vhdl.do work.testbench
+# End time: 12:31:30 on Nov 04,2016, Elapsed time: 0:28:08
+# Errors: 16, Warnings: 0
+# vsim -gui -l msim_transcript -do "PWM_module_run_msim_rtl_vhdl.do" work.testbench 
+# Start time: 12:31:30 on Nov 04,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(bhv)
+# Loading work.pwm(bhv)
+# PWM_module_run_msim_rtl_vhdl.do
+# invalid command name "PWM_module_run_msim_rtl_vhdl.do"
+add wave -position end sim:/testbench/DUT/*
+run -all
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+run -all
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript -do PWM_module_run_msim_rtl_vhdl.do work.testbench
+# End time: 12:33:48 on Nov 04,2016, Elapsed time: 0:02:18
+# Errors: 1, Warnings: 0
+# vsim -gui -l msim_transcript -do "PWM_module_run_msim_rtl_vhdl.do" work.testbench 
+# Start time: 12:33:48 on Nov 04,2016
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(bhv)
+# Loading work.pwm(bhv)
+# PWM_module_run_msim_rtl_vhdl.do
+# invalid command name "PWM_module_run_msim_rtl_vhdl.do"
+add wave -position end sim:/testbench/DUT/*
+run -all
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Compile of PWM.vhd was successful.
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# End time: 12:45:26 on Nov 04,2016, Elapsed time: 0:11:38
+# Errors: 1, Warnings: 0

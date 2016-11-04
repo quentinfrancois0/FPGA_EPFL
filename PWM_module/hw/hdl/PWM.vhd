@@ -29,9 +29,9 @@ END PWM;
 ARCHITECTURE bhv OF PWM IS
 	signal		iRegClkD		: std_logic_vector (15 DOWNTO 0);	-- internal clock divider register
 	signal		iRegDuty		: std_logic_vector (7 DOWNTO 0);	-- internal duty cycle register
-	signal		iRegPol			: std_logic;	-- internal polarity register
+	signal		iRegPol			: std_logic_vector (7 DOWNTO 0);	-- internal polarity register
 	signal		iRegCount		: std_logic_vector (7 DOWNTO 0);	-- internal counter register
-	signal		iRegCtrl		: std_logic;	-- internal control register
+	signal		iRegCtrl		: std_logic_vector (7 DOWNTO 0);	-- internal control register
 	signal		iRegOut			: std_logic;	-- internal phantom out register
 	signal		iRegCountEnable	: std_logic_vector (15 DOWNTO 0);	-- internal phantom coutner register
 	signal		iRegRead		: std_logic;	-- internal phantom read register
@@ -49,9 +49,9 @@ WriteProcess:
 		iRegPol			<= (others => '0');
 		iRegCount		<= (others => '0');
 		iRegCtrl		<= (others => '0');
-		iRegOut			<= (others => '0');
+		iRegOut			<= '0';
 		iRegCountEnable	<= (others => '0');
-		iRegRead		<= (others => '0');
+		iRegRead		<= '0';
 	elsif rising_edge(Clk) then
 		if W = '1' then
 			case Addr is
@@ -79,7 +79,7 @@ WaitRead:
 ReadProcess:
 	Process(iRegRead, Addr, iRegClkD, iRegDuty, iRegPol, iRegCount, iRegCtrl)
 	Begin
-	RDData <= (others => '0');
+	RData <= (others => '0');
       if iRegRead = '1' then
 			case Addr is
 				when "000" => RData <= iRegClkD;
@@ -98,16 +98,16 @@ ClkDivider:
 	Begin
 		if rising_edge(clk) then
 			if iRegCountEnable < iRegClkD then
-				iRegCountEnable <= iRegCountEnable+1;
+				iRegCountEnable <= std_logic_vector(unsigned(iRegCountEnable) + 1);
 			elsif  iRegCountEnable = iRegClkD then
-				if iRegCount = "255" then
-					iRegCount <= '0';
+				if iRegCount = X"ff" then
+					iRegCount <= (others => '0');
 				else
-					iRegCount <= iRegCount+1;
+					iRegCount <= std_logic_vector(unsigned(iRegCount) + 1);
 				end if;
-				iRegCountEnable <= '0';
+				iRegCountEnable <= (others => '0');
 			else
-				iRegCountEnable <= '0';
+				iRegCountEnable <= (others => '0');
 			end if;
 		end if;
 	end process ClkDivider;
@@ -117,10 +117,10 @@ UpdateRegOut:
 	Process(iRegCount, iRegDuty, iRegPol)
 	Begin
 		if iRegCount <= iRegDuty then
-			iRegOut <= iRegPol;
+			iRegOut <= iRegPol(0);
 		end if;
 		if iRegCount > iRegDuty then
-			iRegOut <= not iRegPol;
+			iRegOut <= not iRegPol(0);
 		end if;
 	end process UpdateRegOut;
 
@@ -128,7 +128,7 @@ UpdateRegOut:
 OutPWM:
 	Process(iRegCtrl, iRegOut)
 	Begin
-		if iRegCtrl = '0' then
+		if iRegCtrl = "00" then
 			PWMOut <= '0';
 		else
 			PWMOut <= iRegOut;

@@ -1,0 +1,4 @@
+# Compile of testbench_PWM.vhd was successful.
+# Compile of PWM.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript -do PWM_module_run_msim_rtl_vhdl.do work.testbench
