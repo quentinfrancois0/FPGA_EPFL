@@ -20,8 +20,8 @@ ENTITY PWM IS
 		Addr	: IN std_logic_vector (3 DOWNTO 0);
 		R		: IN std_logic;
 		W		: IN std_logic;
-		RDData	: OUT std_logic_vector (15 DOWNTO 0);
-		WRData	: IN std_logic_vector (15 DOWNTO 0);
+		RData	: OUT std_logic_vector (15 DOWNTO 0);
+		WData	: IN std_logic_vector (15 DOWNTO 0);
 		PWMOut	: OUT std_logic
 );
 END PWM;
@@ -37,7 +37,6 @@ ARCHITECTURE bhv OF PWM IS
 	signal		iRegEnable	: boolean := false;	-- internal enable register
 	signal		iRegOut		: boolean := false;	-- internal out register
 	variable 	i			: integer := '0';
-	variable	stage		: integer := '1';
 	variable	tbase		: integer := '1';
 
 BEGIN
@@ -56,14 +55,16 @@ WriteProcess:
 		iRegCtrl	<= (others => '0');
 		iRegEnable	<= false;
 		iRegOut		<= false;
+		i := '0';
+		tbase := '1';
 	elsif rising_edge(Clk) then
 		if W = '1' then
 			case Addr is
-				when "0000" => iRegClkD <= WRData;
-				when "0001" => iRegPeriod <= WRData;
-				when "0011" => iRegDuty <= WRData;
-				when "0101" => iRegPol <= WRData;
-				when "1001" => iRegCtrl <= WRData;
+				when "0000" => iRegClkD <= WData;
+				when "0001" => iRegPeriod <= WData;
+				when "0011" => iRegDuty <= WData;
+				when "0101" => iRegPol <= WData;
+				when "1001" => iRegCtrl <= WData;
 				when others => null;
 			end case;
 		end if;
@@ -87,12 +88,12 @@ ReadProcess:
 	RDData <= (others => '0');
       if iRegRead = '1' then
 			case Addr is
-				when "0000" => RDData <= iRegClkD;
-				when "0001" => RDData <= iRegPeriod;
-				when "0011" => RDData <= iRegDuty;
-				when "0101" => RDData <= iRegPol;
-				when "0110" => RDData <= iRegCount;
-				when "1001" => RDData <= iRegCtrl;
+				when "0000" => RData <= iRegClkD;
+				when "0001" => RData <= iRegPeriod;
+				when "0011" => RData <= iRegDuty;
+				when "0101" => RData <= iRegPol;
+				when "0110" => RData <= iRegCount;
+				when "1001" => RData <= iRegCtrl;
 				when others => null;
 			end case;
       end if;
