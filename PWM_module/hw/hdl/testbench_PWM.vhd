@@ -103,12 +103,12 @@ begin
 	toggle_reset;
 	
 	-- Writing clock_divider = 0, period = 256 * (2*HalfPeriod) = 5,12 us
-	write_register("000", X"01");
+	write_register("000", X"00");
 	write_register("001", X"00");
-	wait for 4 * HalfPeriod; -- ligne qui empêche d'écrire le registre duty cycle
+--	wait for 4 * HalfPeriod; -- ligne qui empêche d'écrire le registre duty cycle
 	
-	-- Writing duty cycle = 50%
-	write_register("010", X"80");
+	-- Writing duty cycle = 62.7%
+	write_register("010", X"a0");
 	
 	-- Writing polarity = 1
 	write_register("011", X"01");
@@ -117,7 +117,7 @@ begin
 	write_register("101", X"01");
 	
 	-- Wait for 1 period of the PWM
-	wait for 1024 * 2 * HalfPeriod;
+	wait for 512 * 2*HalfPeriod;
 	
 	end_sim <= true;
 	wait;
