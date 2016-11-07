@@ -881,6 +881,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_32
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_33
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_34
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1_35
+set_global_assignment -name QIP_FILE system/synthesis/system.qip
 set_global_assignment -name VHDL_FILE ../hdl/DE0_Nano_SoC_top_level.vhd
 set_global_assignment -name VHDL_FILE ../hdl/PWM.vhd
 set_global_assignment -name VERILOG_FILE de0_nano_soc_baseline.v
