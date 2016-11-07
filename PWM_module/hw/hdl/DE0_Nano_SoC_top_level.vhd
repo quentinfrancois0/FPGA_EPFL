@@ -29,8 +29,8 @@ entity DE0_Nano_SoC_top_level is
 --        ARDUINO_IO       : inout std_logic_vector(15 downto 0);
 --        ARDUINO_RESET_N  : inout std_logic;
 
-        -- CLOCK
-        FPGA_CLK1_50     : in    std_logic;
+		  -- CLOCK
+		  FPGA_CLK1_50     : in    std_logic;
 --        FPGA_CLK2_50     : in    std_logic;
 --        FPGA_CLK3_50     : in    std_logic;
 
@@ -38,13 +38,13 @@ entity DE0_Nano_SoC_top_level is
         KEY_N            : in    std_logic_vector(1 downto 0);
 
         -- LED
-        LED              : out   std_logic_vector(7 downto 0)
+        LED              : out   std_logic_vector(7 downto 0);
 
 --        -- SW
 --        SW               : in    std_logic_vector(3 downto 0);
 --
---        -- GPIO_0
---        GPIO_0           : inout std_logic_vector(35 downto 0);
+        -- GPIO_0
+        GPIO_0           : inout std_logic_vector(35 downto 0)
 --
 --        -- GPIO_1
 --        GPIO_1           : inout std_logic_vector(35 downto 0);
@@ -105,19 +105,27 @@ architecture rtl of DE0_Nano_SoC_top_level is
 
 	component system is
 		port (
-			clk_clk       : in  std_logic := 'X'; -- clk
-			reset_reset_n : in  std_logic := 'X'; -- reset_n
-			pwm_export    : out std_logic         -- export
+			clk_clk      		: in  std_logic := 'X'; -- clk
+			reset_reset_n 		: in  std_logic := 'X'; -- reset_n
+			pwm_export_export	: out std_logic         -- export
 		);
 	end component system;
+	
+	signal pwm: std_logic;
 
 begin
 
 	u1 : component system
 		port map (
-			clk_clk       => FPGA_CLK1_50,       --   clk.clk
-			reset_reset_n => KEY_N(0), -- reset.reset_n
-			pwm_export    => LED(0)     --   pwm.export
+			clk_clk      		=> FPGA_CLK1_50,       --   clk.clk
+			reset_reset_n 		=> KEY_N(0), -- reset.reset_n
+			pwm_export_export	=> pwm     --   pwm.export
 	);
+	
+	LED(0) <= pwm;
+	GPIO_0(0) <= pwm;
+	GPIO_0(1) <= '0';
+	
+	LED(7 DOWNTO 1) <= (others => '0');
 
 end;
