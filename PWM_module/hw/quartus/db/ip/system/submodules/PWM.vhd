@@ -119,11 +119,12 @@ ClkDivider:
 UpdateRegOut:
 	Process(iRegCount, iRegDuty, iRegPol)
 	Begin
-		iRegOut	<= '0';
 		if iRegCount <= iRegDuty then
 			iRegOut <= iRegPol(0);
-		else
+		elsif iRegCount > iRegDuty then
 			iRegOut <= not iRegPol(0);
+		else
+			iRegOut	<= '0';
 		end if;
 	end process UpdateRegOut;
 

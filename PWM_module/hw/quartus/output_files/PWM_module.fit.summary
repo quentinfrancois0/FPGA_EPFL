@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Nov 07 17:23:35 2016
+Fitter Status : Successful - Tue Nov 08 14:14:19 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : PWM_module
 Top-level Entity Name : DE0_Nano_SoC_top_level
 Family : Cyclone V
 Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,469 / 15,880 ( 9 % )
-Total registers : 2164
+Logic utilization (in ALMs) : 1,461 / 15,880 ( 9 % )
+Total registers : 2166
 Total pins : 47 / 314 ( 15 % )
 Total virtual pins : 0
 Total block memory bits : 1,112,320 / 2,764,800 ( 40 % )
