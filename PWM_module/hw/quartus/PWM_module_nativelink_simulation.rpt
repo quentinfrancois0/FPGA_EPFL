@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-Info: NativeLink has detected VHDL design -- VHDL simulation models will be used
+Info: NativeLink has detected a mixed Verilog and VHDL design -- vhdl simulation models will be used
 
 ========= EDA Simulation Settings =====================
 
@@ -19,5 +19,5 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script d:/logiciels/altera_lite/16.0/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File PWM_module_run_msim_rtl_vhdl.do already exists - backing up current file as PWM_module_run_msim_rtl_vhdl.do.bak3
+Warning: File PWM_module_run_msim_rtl_vhdl.do already exists - backing up current file as PWM_module_run_msim_rtl_vhdl.do.bak5
 Info: Spawning ModelSim-Altera Simulation software 

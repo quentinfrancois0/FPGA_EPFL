@@ -1,5 +1,5 @@
 Assembler report for PWM_module
-Tue Nov 08 14:14:32 2016
+Fri Nov 11 11:08:51 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 08 14:14:32 2016 ;
+; Assembler Status      ; Successful - Fri Nov 11 11:08:51 2016 ;
 ; Revision Name         ; PWM_module                            ;
 ; Top-level Entity Name ; DE0_Nano_SoC_top_level                ;
 ; Family                ; Cyclone V                             ;
@@ -80,8 +80,8 @@ agreement for further details.
 ; Option         ; Setting                                                                                   ;
 +----------------+-------------------------------------------------------------------------------------------+
 ; Device         ; 5CSEMA4U23C6                                                                              ;
-; JTAG usercode  ; 0x034E3F8D                                                                                ;
-; Checksum       ; 0x034E3F8D                                                                                ;
+; JTAG usercode  ; 0x034E1013                                                                                ;
+; Checksum       ; 0x034E1013                                                                                ;
 +----------------+-------------------------------------------------------------------------------------------+
 
 
@@ -91,14 +91,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Nov 08 14:14:23 2016
+    Info: Processing started: Fri Nov 11 11:08:42 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off PWM_module -c PWM_module
 Info (115030): Assembler is generating device programming files
 Info (115017): Design contains a time-limited core -- only a single, time-limited programming file can be generated
 Warning (210042): Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 951 megabytes
-    Info: Processing ended: Tue Nov 08 14:14:32 2016
+    Info: Peak virtual memory: 950 megabytes
+    Info: Processing ended: Fri Nov 11 11:08:51 2016
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 

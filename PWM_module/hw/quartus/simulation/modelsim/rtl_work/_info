@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/Temp/FPGA_EPFL/PWM_module/hw/quartus/simulation/modelsim
 Ede0_nano_soc_top_level
-Z1 w1478256861
+Z1 w1478858688
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -17,13 +17,13 @@ Z4 8D:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd
 Z5 FD:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd
 l0
 L20
-VUXjTOfnibcgS1;l]TD^<l0
-!s100 7`OLl26@0lhlAd?[Ua77Z1
+VNR_U:5S]F;<Vb?[>3=X<80
+!s100 =V2nzFHXY5U3@WmVEeUWR1
 Z6 OV;C;10.4d;61
 31
-Z7 !s110 1478287511
+Z7 !s110 1478984723
 !i10b 1
-Z8 !s108 1478287510.000000
+Z8 !s108 1478984723.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|D:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd|
 Z10 !s107 D:/Temp/FPGA_EPFL/PWM_module/hw/hdl/DE0_Nano_SoC_top_level.vhd|
 !i113 1
@@ -32,11 +32,11 @@ Z12 tExplicit 1
 Artl
 R2
 R3
-DEx4 work 22 de0_nano_soc_top_level 0 22 UXjTOfnibcgS1;l]TD^<l0
-l106
+DEx4 work 22 de0_nano_soc_top_level 0 22 NR_U:5S]F;<Vb?[>3=X<80
+l116
 L104
-V`8lW0_:NmV?Cz^W^:=K^k3
-!s100 b1@W7KP?U2VS3]Z`Sj`:k0
+V0SNTc2RSkTmzndIV6zjUO2
+!s100 ==fc_6_Doc^L0aL2K9_Jl1
 R6
 31
 R7

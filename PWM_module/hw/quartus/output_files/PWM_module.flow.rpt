@@ -1,5 +1,5 @@
 Flow report for PWM_module
-Tue Nov 08 14:15:01 2016
+Fri Nov 11 11:09:18 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 08 14:14:32 2016       ;
+; Flow Status                     ; Successful - Fri Nov 11 11:08:51 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; PWM_module                                  ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_top_level                      ;
@@ -49,7 +49,7 @@ agreement for further details.
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 1,461 / 15,880 ( 9 % )                      ;
-; Total registers                 ; 2166                                        ;
+; Total registers                 ; 2163                                        ;
 ; Total pins                      ; 47 / 314 ( 15 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,112,320 / 2,764,800 ( 40 % )              ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/08/2016 14:10:14 ;
+; Start date & time ; 11/11/2016 11:04:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PWM_module          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+------------------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name            ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1098258261821.147861061408772         ; --            ; --                     ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1098258261821.147885869606588         ; --            ; --                     ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; None                                  ; --            ; --                     ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --                     ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --                     ; --             ;
@@ -98,11 +98,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:21     ; 1.0                     ; 1097 MB             ; 00:02:30                           ;
-; Fitter                    ; 00:02:41     ; 1.0                     ; 2016 MB             ; 00:03:52                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 951 MB              ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:28     ; 1.0                     ; 1226 MB             ; 00:00:27                           ;
-; Total                     ; 00:04:39     ; --                      ; --                  ; 00:06:58                           ;
+; Analysis & Synthesis      ; 00:01:17     ; 1.0                     ; 1093 MB             ; 00:02:16                           ;
+; Fitter                    ; 00:02:20     ; 1.0                     ; 2076 MB             ; 00:03:19                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 950 MB              ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:26     ; 1.0                     ; 1231 MB             ; 00:00:26                           ;
+; Total                     ; 00:04:12     ; --                      ; --                  ; 00:06:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

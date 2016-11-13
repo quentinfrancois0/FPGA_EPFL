@@ -124,7 +124,8 @@ begin
 	
 	LED(0) <= pwm;
 	GPIO_0(0) <= pwm;
-	GPIO_0(1) <= '0';
+	GPIO_0(2) <= '1';
+	GPIO_0(4) <= '0';
 	
 	LED(7 DOWNTO 1) <= (others => '0');
 

@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>7 nov. 2016 17:34:31</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1478536471745</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>11 nov. 2016 11:11:37</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1478859097914</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Temp\FPGA_EPFL\PWM_module\sw\nios\PWM_module_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>D:\Temp\FPGA_EPFL\PWM_module\hw\quartus\system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>

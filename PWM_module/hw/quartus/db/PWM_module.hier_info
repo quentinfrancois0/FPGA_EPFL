@@ -11,10 +11,10 @@ LED[5] <= <GND>
 LED[6] <= <GND>
 LED[7] <= <GND>
 GPIO_0[0] <> GPIO_0[0]
-GPIO_0[1] <> <GND>
-GPIO_0[2] <> <UNC>
+GPIO_0[1] <> <UNC>
+GPIO_0[2] <> <VCC>
 GPIO_0[3] <> <UNC>
-GPIO_0[4] <> <UNC>
+GPIO_0[4] <> <GND>
 GPIO_0[5] <> <UNC>
 GPIO_0[6] <> <UNC>
 GPIO_0[7] <> <UNC>
